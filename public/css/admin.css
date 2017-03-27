@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=cyrillic');
 html,
 body,
-#app {
+#app,
+#login {
   width: 100%;
   height: 100%;
 }
@@ -25,6 +26,43 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
+}
+#login {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+#login .card {
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid gray;
+  width: 500px;
+  border-radius: 0;
+}
+#login .card-header {
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #760b0e;
+  color: white;
+  font-weight: 400;
+  border-radius: 0;
+}
+.hide {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: absolute;
 }
 #top-nav {
   display: -webkit-box;
