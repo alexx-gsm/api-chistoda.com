@@ -42,6 +42,7 @@
             <div id="left-menu">
                 <div class="left-menu__title">DASHBOARD<i class="material-icons">chevron_left</i></div>
                 <ul>
+                    <li><a href="{{ url('/admin/price') }}"><i class="material-icons">language</i><span>ПРАЙС</span></a></li>
                     <li><a href="#"><i class="material-icons">language</i><span>НОВОСТИ</span></a></li>
                     <li><a href="#"><i class="material-icons">swap_horiz</i>БЛОГ</a></li>
                     <li><a href="#"><i class="material-icons">monetization_on</i>УСЛУГИ</a></li>
@@ -65,7 +66,7 @@
                 </form>
             </div>
 
-        {{--@yield('content')--}}
+        @yield('content')
 
         </div>
 

@@ -16,6 +16,8 @@ Route::get('/password/reset', function () {
 /*  ADMIN ROUTES */
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/', 'Admin\IndexController@index');
+    Route::get('price', 'Admin\PriceController@index');
+    Route::post('price/save', 'Admin\PriceController@save');
 });
 
 
