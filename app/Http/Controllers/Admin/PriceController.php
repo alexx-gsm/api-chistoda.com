@@ -12,10 +12,7 @@ class PriceController extends Controller
 {
     public function index()
     {
-
-        return view('admin.price', [
-            'price' => Price::orderby('id', 'desc')->first()
-        ]);
+        return view('admin.price', ['prices' => Price::orderby('id', 'desc')->get()]);
     }
 
     public function save(Request $request)
@@ -32,6 +29,7 @@ class PriceController extends Controller
 
                 $price = new Price();
                 $price->title = $title;
+                $price->name = $fileName;
                 $price->link = $price::PATH . $fileName;
                 $price->user_id = Auth::id();
                 $price->save();

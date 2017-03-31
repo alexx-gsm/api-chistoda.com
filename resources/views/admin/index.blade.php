@@ -1,22 +1,22 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="content-wrapper row">
-   <div class="col-xs-1 col-sm-2">
-MENU
-   </div>
-   <div class="col-xs-10 col-sm-8">
-       <div class="card">
-           <div class="card-header">
-               Featured
-           </div>
-           <div class="card-block">
-               <h4 class="card-title">Special title treatment</h4>
-               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-           </div>
-       </div>
-   </div>
-
+<div class="content-wrapper">
+    <div class="container">
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Прайс:  <span>{{ $price->name }}</span>
+                    <span>{{ $price->user->name }}</span>
+                    <span>{{ $price->created_at }}</span>
+                </li>
+                <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+                <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+                <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+                <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+            </ul>
+        </div>
+    </div>
 
 </div>
 

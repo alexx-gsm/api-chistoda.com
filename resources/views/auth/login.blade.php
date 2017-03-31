@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <input type="submit" class="hide">
+                <input type="submit" class="btn btn-secondary float-right" value="Войти">
 
                 {{--<div class="form-group row">--}}
                     {{--<div class="offset-sm-9 col-sm-10">--}}

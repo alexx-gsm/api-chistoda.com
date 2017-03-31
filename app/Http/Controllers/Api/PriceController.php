@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Api;
 
 use App\Price;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class IndexController extends Controller
+class PriceController extends Controller
 {
     /**
      * Show the ADMIN dashboard.
@@ -15,8 +15,9 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('admin.index', [
-            'price' => Price::orderby('id', 'desc')->first()
-        ]);
+        $price = Price::orderby('id', 'desc')->first();
+        return response()->json($price);
+
+//        return response()->json($price);
     }
 }

@@ -2,14 +2,20 @@
 
 
 Route::get('/', function () {
-    return Redirect::to('/login');
+    return Redirect::to('/admin/login');
 });
 Route::get('/register', function () {
-    return Redirect::to('/login');
+    return Redirect::to('/admin/login');
 });
 
 Route::get('/password/reset', function () {
-    return Redirect::to('/login');
+    return Redirect::to('/admin/login');
+});
+
+
+/* API */
+Route::group(['prefix' => 'api'], function () {
+    Route::get('price', 'Api\PriceController@index');
 });
 
 
@@ -18,13 +24,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/', 'Admin\IndexController@index');
     Route::get('price', 'Admin\PriceController@index');
     Route::post('price/save', 'Admin\PriceController@save');
+
 });
-
-
-
-/*  API ROUTES  */
-Route::get('/api/test', function () {
-    return '<h2>Hello test</h2>';
+Route::group(['prefix' => 'admin'], function () {
+    Auth::routes();
 });
-
-Auth::routes();
